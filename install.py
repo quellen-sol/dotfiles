@@ -6,6 +6,7 @@ from os import path
 filemap = {
   ".prettierrc": "~/",
   ".rustfmt.toml": "~/",
+  "starship.toml": "~/.config/",
 }
 
 thisFilePath = path.dirname(path.realpath(__file__))
