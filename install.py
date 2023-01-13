@@ -27,5 +27,9 @@ def install():
       print("Failed to copy " + filename + " to " + copyLocation)
     else:
       print("Copied " + filename + " to " + copyLocation)
+  if numberFailed > 0:
+    print(f"Failed to copy {numberFailed} files")
+    exit(1)
+  
 
 install()
