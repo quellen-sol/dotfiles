@@ -8,6 +8,7 @@ filemap = {
   ".prettierrc": "~/",
   ".rustfmt.toml": "~/",
   "starship.toml": "~/.config/",
+  ".vimrc": "~/",
 }
 
 # Commands
