@@ -11,3 +11,6 @@ behind = '⇣ $count'
 
 [nodejs]
 disabled = true
+
+[aws]
+disabled = true

@@ -53,8 +53,9 @@ def pullFromSystem():
 def main():
 
   # If no args, just run `install()`
-  if (len(argv) == 0):
-    install()
+  if (len(argv) <= 1):
+    install();
+    return;
 
   cmd = argv[1].lower()
 
