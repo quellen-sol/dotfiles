@@ -9,7 +9,8 @@ filemap = {
   ".rustfmt.toml": "~/",
   "starship.toml": "~/.config/",
   ".vimrc": "~/",
-}
+  "nvim": "~/.config/",
+  }
 
 # Commands
 installCommands = ["install", "i"]
@@ -26,7 +27,7 @@ def install():
   numberFailed = 0
   for filename, copyLocation in filemap.items():
     copyLocation = appendTrailingSlash(os.path.expanduser(copyLocation))
-    result = os.system("cp " + thisFilePath + "/dotfiles/" + filename + " " + copyLocation)
+    result = os.system("cp -r " + thisFilePath + "/dotfiles/" + filename + " " + copyLocation)
     if (result != 0):
       numberFailed += 1
       print("Failed to copy " + filename + " to " + copyLocation)
@@ -41,7 +42,7 @@ def pullFromSystem():
   numFailed = 0
   for filename, copyLocation in filemap.items():
     copyLocation = appendTrailingSlash(os.path.expanduser(copyLocation))
-    result = os.system("cp " + copyLocation + filename + " " + thisFilePath + "/dotfiles/")
+    result = os.system("cp -r " + copyLocation + filename + " " + thisFilePath + "/dotfiles/")
     if (result != 0):
       numFailed += 1
       print("Failed to copy " + filename + " to " + copyLocation)
